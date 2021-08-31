@@ -9,3 +9,10 @@ Essential Characteristics:
    Able to scale rapidy outward and inward with demand. Capabilities can be elastically provisioned and released (in some cases automatically)
 5. Measured Service
    Automatically control and optimize resource.  Resource can be monitored, controlled and reported, providing transparency.
+
+
+Cloud architectures:
+1. Public - 1 cloud Environment
+2. Private - on premise / AWS outpost/ Azure/ Google Anthos
+3. Hybrid - Public cloud and private cloud != (doesn’t) public cloud and on premise (legacy)
+4. Multi - Multiple cloud Environment, cloud level resilience (HA)

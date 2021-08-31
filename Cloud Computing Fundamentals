@@ -1,6 +1,11 @@
-Cloud Computing
+Essential Characteristics:
 1. On demand self service
+   Consumer should be able to provision computing capabilities without requiring human interaction
 2. Broad Network Access
+   Capabilities are avialable over the network using standard protocols and accessed through any standard device (laptop, phone)
 3. Resource Pooling
+   Computing resources are pooled to serve multiple consumers using a multi-tenant model
 4. Rapid Elasticity
+   Able to scale rapidy outward and inward with demand. Capabilities can be elastically provisioned and released (in some cases automatically)
 5. Measured Service
+   Automatically control and optimize resource.  Resource can be monitored, controlled and reported, providing transparency.

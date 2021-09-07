@@ -3,6 +3,6 @@ Personal notes for the SAA-C02 Exam.
 Created a repository to keep notes from Adrian Cantrill's SAA-C02 course https://learn.cantrill.io and A cloud guru https://acloudguru.com
 
 # Table of Contents  
-[1. Cloud Computing Fundamentals](https://github.com/amccaskill/SAA-C02-Notes/tree/main/cloud_computing_fundamentals)
+[1. Cloud Computing Fundamentals](https://github.com/amccaskill/SAA-C02-Notes/blob/main/cloud_computing_fundamentals/Cloud%20Computing%20Fundamentals)
 
 

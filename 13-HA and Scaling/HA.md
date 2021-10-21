@@ -77,6 +77,8 @@ High Availability and Scaling
             2.  Common use case is when a user state is stored on an individual instance.
             3.  Problem with this design is that it can cause uneven loads on backend servers.
             4.  Ideal situation would be to host the user state or the session on something external like Dynamo DB.  This creates stateless EC2 instances.
+    
+
 
 
 

@@ -1,4 +1,4 @@
-High Availability and Scaling
+## High Availability and Scaling
     Load Balancing Fundamentals
 •   LB listens on specific ports (i.e. 443, 80) the LB is referred to as the Listener
 •   Clients connect to the LB (listener)
@@ -32,12 +32,12 @@ High Availability and Scaling
 •   Has a Minimum, Desired and Maximum
 •   Provision or Terminate instances to keep at the Desired level (between Min/Max)
 •   Scaling Policies - automate based on metrics
-•	Manual Scaling - Manually adjust the desired capacity
-•	Scheduled Scaling - Time based adjustment
-•	Dynamic Scaling
-•	Simple - CPU above 50% +1 CPU below 50% -1
-•	Stepped Scaling - Bigger +/- based on difference
-•	Tracked Tracking - Desired Aggregate CPU = 40% ... ASG handle it
+•   Manual Scaling - Manually adjust the desired capacity
+•   Scheduled Scaling - Time based adjustment
+•   Dynamic Scaling
+•   Simple - CPU above 50% +1 CPU below 50% -1
+•   Stepped Scaling - Bigger +/- based on difference
+•   Tracked Tracking - Desired Aggregate CPU = 40% ... ASG handle it
 •   Cool down periods to avoid rapid scaling
 •   Think about more, smaller instances - granularity
 •   Use with ALB's for elasticity - abstraction
@@ -84,6 +84,7 @@ ELB has the option to enable stickiness.
 
 
     
+
 
 
 

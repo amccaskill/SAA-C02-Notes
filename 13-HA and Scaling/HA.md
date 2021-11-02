@@ -18,10 +18,10 @@
             Rules are path based (i.e. /cat /dog) or host based
             Support EC2, ECS, EKS, Lambda, HTTPS, HTTP/2 and WebSocket
             ALB can use (SNI) server name indication for multiple SSL Certs -host based rule
-Recommended vs CLB (legacy)
-     Launch Configurations and Launch Templates
-    Launch Configurations and Launch Templates provide the WHAT to Auto scaling groups.  They define WHAT gets provisioned the AMI, the Instance Type, the networking & security, the key pair to use, the user-data to inject and IAM Role to attach.
-Key concepts 
+            Recommended vs CLB (legacy)
+            Launch Configurations and Launch Templates
+            Launch Configurations and Launch Templates provide the WHAT to Auto scaling groups.  They define WHAT gets provisioned the AMI, the Instance Type, the networking & security, the key pair to use, the user-data to inject and IAM Role to attach.
+    Key concepts 
             Allow you to define the configuration of an EC2 instance in advance
             AMI, Instance type, storage, key pair, networking, security groups, user-data, and IAM role
             Both are NOT editable - define once.  LT has version
@@ -42,26 +42,26 @@ Key concepts
             Think about more, smaller instances - granularity
             Use with ALB's for elasticity - abstraction
             ASG defines WHEN and WHERE, LT defines WHAT
-Network Load Balancer
-        NLB are layer 4 and understand TCP and UDP
-        Can't understand HTTP/S but are faster 100ms vs 400ms for ALB
-        Millions of requests per second highest performing LB
-        Only AWS LB family can be assigned a static IP address 1 interface with static IP per AZ, can use elastic IPs (whitelisting)
-        Can do SSL pass through.  Anything above TCP is passed.
-        Can load balance no http/s applications - doesn't care about anything above TCP/UDP
-        SSL Offload and Session Stickiness
-        SSL Bridging
-        Default LB Listener is configured for HTTPS.
-        Connection is terminated on the LB
-        Needs a SSL certificate for the domain name the application uses.
-        AWS does have some level of access to that certificate
-        The LB makes a second back end compute resources
-        LB can see the HTTP traffic (after decryption) , it can take actions based off the contents of the HTTP. Then create new encrypted sessions between it and the EC2 instances.
-        EC2 instances will need matching SSL certificates
-        High volume applications could experience high overhead
-        SSL Pass-through
-        The load balancer passes the connection to the back-end instances.  The ELB doesn't decrypt at all.
-        The instances need certificates installed. The ELB doesn't.
+    Network Load Balancer
+            NLB are layer 4 and understand TCP and UDP
+            Can't understand HTTP/S but are faster 100ms vs 400ms for ALB
+            Millions of requests per second highest performing LB
+            Only AWS LB family can be assigned a static IP address 1 interface with static IP per AZ, can use elastic IPs (whitelisting)
+            Can do SSL pass through.  Anything above TCP is passed.
+            Can load balance no http/s applications - doesn't care about anything above TCP/UDP
+            SSL Offload and Session Stickiness
+            SSL Bridging
+            Default LB Listener is configured for HTTPS.
+            Connection is terminated on the LB
+            Needs a SSL certificate for the domain name the application uses.
+            AWS does have some level of access to that certificate
+            The LB makes a second back end compute resources
+            LB can see the HTTP traffic (after decryption) , it can take actions based off the contents of the HTTP. Then create new encrypted sessions between it and the EC2 instances.
+            EC2 instances will need matching SSL certificates
+            High volume applications could experience high overhead
+            SSL Pass-through
+            The load balancer passes the connection to the back-end instances.  The ELB doesn't decrypt at all.
+            The instances need certificates installed. The ELB doesn't.
 
 Network Load balancer which is able to perform this style of architecture.  
                 LB is configured to listen using TCP

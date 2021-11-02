@@ -63,7 +63,8 @@
             The load balancer passes the connection to the back-end instances.  The ELB doesn't decrypt at all.
             The instances need certificates installed. The ELB doesn't.
 
-Network Load balancer which is able to perform this style of architecture.  
+            Network Load balancer 
+                which is able to perform this style of architecture.  
                 LB is configured to listen using TCP
                 AWS never see the certificate it's managed by you.
                 Traffic can't be load balanced based on HTTP.
